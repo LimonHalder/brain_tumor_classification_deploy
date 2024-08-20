@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris App</title>
+</head>
+<body>
+    <h1>Welcome iris application</h1>
+    {% if result %}
+        <h1> Flower you are tryong to classify is {{result}} </h1>
+    {% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        sepal_length <input type="text", name="sepal_length"><br>
+        sepal_width <input type="text", name="sepal_width"><br>
+        petal_length <input type="text", name="petal_length"><br>
+        petal_width <input type="text", name="petal_width"><br>
+        <input type="submit" name="submit" >
+    </form>
+</body>
+</html>
